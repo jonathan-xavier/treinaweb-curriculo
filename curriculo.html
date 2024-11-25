@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
+    <style scoped lang="scss">
       body {
         padding: 1rem;
         font-family: Arial, Helvetica, sans-serif;
@@ -42,7 +42,7 @@
 
       .cursos {
         margin-top: 1rem;
-        background-color: #292C34;
+        background-color: #292c34;
         padding: 1.5rem;
         border-radius: 5px;
       }
@@ -50,7 +50,7 @@
       .social {
         margin-top: 1rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1rem;
       }
 
@@ -88,7 +88,6 @@
       }
 
       .skill {
-        
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -126,8 +125,42 @@
         border-radius: 1.5rem;
       }
 
-      .presentetion{
+      .presentation {
         margin-top: 4rem;
+      }
+      .social-access {
+        background-color: #292c34;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #e2e4e8;
+        text-decoration: none;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .contact {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: #bb72e8;
+      }
+
+      .social-access-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-access-text span:nth-child(2) {
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
       }
     </style>
   </head>
@@ -140,12 +173,12 @@
         alt=""
       />
 
-      <div class="presentetion">
+      <div class="presentation">
         <span class="title"
           ><span class="console">console</span>.
           <span class="log">log</span>(<span class="ola-mundo"
             >'Olá mundo!'</span
-          >) Meu nome é <span class="name">Jonathan xavier</span> e sou</span
+          >) Meu nome é <span class="name">Jonathan Xavier</span> e sou</span
         >
       </div>
       <span class="profession">Desenvolvedor Front-end</span>
@@ -177,11 +210,36 @@
       </div>
 
       <div class="social">
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src="assets/instagra.jpeg" alt="" />
+        <div class="social-access-text">
+          <span class="contact">Contato</span>
+          <span>Gostou do meu curriculo?</span>
+          <p>Entre em contato ou acompanhe as minhas redes sociais!</p>
+        </div>
+
+        <a
+          class="social-access"
+          href="https://www.linkedin.com/in/jonathan-xavier-desenvolvedor/"
+          target="_blank"
+        >
+          <img src="assets/LinkedinLogo.png" alt="" />
+          Linkedin
         </a>
-        <a href="https://br.linkedin.com/" target="_blank">
-          <img src="assets/linkedin.png" alt="" />
+        <a
+          class="social-access"
+          href="https://github.com/jonathan-xavier"
+          target="_blank"
+        >
+          <img src="assets/GithubLogo.png" alt="" />
+          GitHub
+        </a>
+
+        <a
+          class="social-access"
+          href="https://www.instagram.com/jhon_xavvier/"
+          target="_blank"
+        >
+          <img src="assets/InstagramLogo.png" alt="" />
+          Instagram
         </a>
       </div>
     </div>
