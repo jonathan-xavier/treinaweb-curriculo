@@ -1,91 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            body{
-                padding: 1rem;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .profile{
-                border-radius: 48%;
-                width: 200px;
-                height: 150px;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #16181d;
+        color: #c0c4ce;
+      }
+      .profile {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 3px solid #af5159;
+      }
 
-            img{
-                width: 40px;
-            }
+      img {
+        width: 40px;
+        height: 40px;
+      }
 
-            .button{
-                background-color: black;
-                padding: 10px 20px;
-                border-radius: 5px;
-                color: white;
-                text-decoration: none;
-            }
+      .button {
+        background-color: #eabd5f;
+        padding: 10px 20px;
+        border-radius: 2rem;
+        color: black;
+        text-decoration: none;
+      }
 
-            .container{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                align-items: center;
-                margin-top: 2rem;
-            }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        margin-top: 2rem;
+      }
 
-            hr{
-                border: 1px solid  #9f9f9f;
-                width: 100%;
-            }
+      .cursos {
+        margin-top: 1rem;
+        background-color: #292C34;
+        padding: 1rem;
+        border-radius: 5px;
+      }
 
-            .cursos{
-                background-color: #ccc;
-                padding: 1rem;
-                border-radius: .2rem;
-            }
+      .social {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
 
-            .social{
-                margin-top: 1rem;
-                display: flex;
-                flex-direction: row;
-                gap: 1rem;
-            }
-        </style>
-    </head>
-    <body>
-        <a class="button" href="index.html">Voltar</a>
-        <div class="container">
-            <img class="profile" src="https://github.com/jonathan-xavier.png"  alt="">
-            <h1>Jonathan xavier</h1>
-            <h3>Desenvolvedor Front-end</h3>
-            <hr/>
-            <h2>Cursos:</h2>
-            <div class="cursos">
+      .title {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        color: #c0c4ce;
+      }
 
-                <ul >
-                    <li>Fullstack com Java e Angular - tempo: 1 Ano</li>
-                    <li>Banco de dados - tempo: 6 meses</li>
-                    <li>Análise e desenvolvimento de sistemas - tempo: Cursando</li>
-                </ul>
-            </div>
-            <h2>Experiencia:</h2>
-            <div>
-                <span><strong>Cargo:</strong> Desenvolvedor</span>
-                <span>2 anos e 6 meses</span>
-            </div>
+      .name {
+        color: #af5159;
+        font-weight: 700;
+      }
 
-            <div class="social">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="assets/instagra.jpeg" alt="">
-                </a>
-                <a href="https://br.linkedin.com/" target="_blank">
-                    <img src="assets/linkedin.png" alt="">
-                </a>
-            </div>
-        </div>
+      .profession {
+        margin-top: 1.5rem;
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: #e2e4e8;
+        margin-bottom: 1rem;
+      }
+      .console {
+        color: #a393f9;
+      }
+      .log {
+        color: #50fa7b;
+      }
+      .ola-mundo {
+        color: #e6d478;
+      }
 
-    </body>
+      .text {
+        width: 700px;
+        text-align: center;
+      }
+
+      .skill {
+        
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .vue {
+        padding: 10px 20px;
+        background-color: #50fa7b;
+        color: #16181d;
+        font-weight: bold;
+        border-radius: 1.5rem;
+      }
+      .html {
+        padding: 10px 20px;
+        background-color: #af5159;
+        color: #16181d;
+        font-weight: bold;
+        border-radius: 1.5rem;
+      }
+      .css {
+        padding: 10px 20px;
+        background-color: #3996db;
+        color: #16181d;
+        font-weight: bold;
+        border-radius: 1.5rem;
+      }
+      .javascript {
+        padding: 10px 20px;
+        background-color: #eabd5f;
+        color: #16181d;
+        font-weight: bold;
+        border-radius: 1.5rem;
+      }
+
+      .presentetion{
+        margin-top: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="button" href="index.html">Voltar</a>
+    <div class="container">
+      <img
+        class="profile"
+        src="https://github.com/jonathan-xavier.png"
+        alt=""
+      />
+
+      <div class="presentetion">
+        <span class="title"
+          ><span class="console">console</span>.
+          <span class="log">log</span>(<span class="ola-mundo"
+            >'Olá mundo!'</span
+          >) Meu nome é <span class="name">Jonathan xavier</span> e sou</span
+        >
+      </div>
+      <span class="profession">Desenvolvedor Front-end</span>
+
+      <p class="text">
+        Transformo necessidades em aplicações reais, evolventes e funcionais.
+        Desenvolvo sistemas através da minha paixão pela tecnologia,
+        contribuindo com soluções inovadoras e eficazes para desafios complexos.
+      </p>
+      <div class="skill">
+        <span class="vue">Vue</span>
+        <span class="html">HTML</span>
+        <span class="css">CSS</span>
+        <span class="javascript">Javascript</span>
+      </div>
+
+      <h2>Cursos:</h2>
+      <div class="cursos">
+        <ul>
+          <li>Fullstack com Java e Angular - tempo: 1 Ano</li>
+          <li>Banco de dados - tempo: 6 meses</li>
+          <li>Análise e desenvolvimento de sistemas - tempo: Cursando</li>
+        </ul>
+      </div>
+      <h2>Experiencia:</h2>
+      <div>
+        <span><strong>Cargo:</strong> Desenvolvedor</span>
+        <span>2 anos e 6 meses</span>
+      </div>
+
+      <div class="social">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="assets/instagra.jpeg" alt="" />
+        </a>
+        <a href="https://br.linkedin.com/" target="_blank">
+          <img src="assets/linkedin.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
