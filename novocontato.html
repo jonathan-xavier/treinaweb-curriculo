@@ -1,118 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style scoped lang="scss">
-        body{
-            height: 100vh;
-            background-color: #16181D;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-        }
-        .container{
-            background-color: #292C34;
-            width: 80%;
-            height: 88vh;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 2rem;
-            label{
-                margin-left: 1rem;
-            }
-            input{
-                height: 25px;
-                border-radius: 5px;
-                outline: none;
-                text-decoration: none;
-                padding: 5px;
-            }
-            select{
-                height: 35px;
-                border-radius: 5px;
-                padding: 0px 10px;
-            }
-        }
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-        .button-back{
-            display: flex;
-            width: 100%;
-            a{
-                background-color: #EABD5F;
-                padding: 10px 20px;
-                text-decoration: none;
-                color: black;
-                border-radius: 5px;
-            }
-            margin-top: 1rem;
-            
-        }
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        .main-inputs{
-            
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         grid-template-rows: repeat(4, 1fr);
-         gap: 2rem;
+    <style scoped lang="scss">
+      .nav-link {
+        color: white;
+        &:hover {
+          color: rgb(223, 223, 223);
         }
-
-        .send-button{
-            padding: 10px 25px;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            background-color: #3996db;
-            outline: none;
-            border: none;
-            font-weight: bold;
-        }
-        .send-button:hover{
-            cursor: pointer;
-        }
+      }
     </style>
-    </head>
-    <body>
-        <div class="button-back">
-            <a href="contatos.html">Contatos</a>
-        </div>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark nav-bar-dark">
+      <div class="container-fluid">
+        <ul class="nav-bar">
+          <li class="nav-item">
+            <a class="nav-link active" href="contatos.html">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="container">
-            <div>
-                <form action class="main-inputs">
-                    <input type="text" placeholder="Informe o nome">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header bg-primary text-white">Novo contato</div>
+            <div class="card-body">
+              <form action class="">
+                <input type="text" placeholder="Informe o nome" />
 
-                    <input type="text" placeholder="CPF">
+                <input type="text" placeholder="CPF" />
 
-                    <input type="text" placeholder="Informe o CNPJ">
+                <input type="text" placeholder="Informe o CNPJ" />
 
-                    <input type="text" placeholder="Informe o RG">
+                <input type="text" placeholder="Informe o RG" />
 
-                    <input type="password" placeholder="Informe a sua senha">
+                <input type="password" placeholder="Informe a sua senha" />
 
-                    <input type="email" placeholder="Informe o seu email">
+                <input type="email" placeholder="Informe o seu email" />
 
-                    <select name="Sexo" id>
-                        <option value>Informe o sexo</option>
-                        <option value>Masculino</option>
-                        <option value>Feminino</option>
-                        <option value>Não informado</option>
-                    </select>
-                    <br>
-                </form>
+                <select name="Sexo" id>
+                  <option value>Informe o sexo</option>
+                  <option value>Masculino</option>
+                  <option value>Feminino</option>
+                  <option value>Não informado</option>
+                </select>
+                <br />
+                <textarea >
+Conte sobre voce</textarea
+                >
+                <button class="send-button">Enviar</button>
+              </form>
             </div>
-            <textarea
-            style="width: 100%; height: 40%;">Conte sobre voce</textarea>
-            <button class="send-button">Enviar</button>
-
-
+          </div>
         </div>
-
-    </body>
+      </div>
+    </div>
+  </body>
 </html>

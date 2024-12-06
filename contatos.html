@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <style scoped lang="scss">
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        .navbar{
-            /* overflow: hidden; */
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            /* padding: 1rem; */
-            a{
-                color: white;
-                text-decoration: none;
-                float: left;
-                display: block;
-                text-align: center;
-                padding: 14px 16px;
-                
-            }
-            a:hover{
-                background-color: #ddd;
-                color: black;
-                transition: .3s;
-            }
-        }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .my-table{
+        margin-top: 3rem !important;
+        width: 80%;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="novocontato.html">Novo contato</a>
-        <a href="editarcontato.html">Editar contato</a>   
-    </div>
-    <table>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td>Ernst Handel</td>
-          <td>Roland Mendel</td>
-          <td>Austria</td>
-        </tr>
-        <tr>
-          <td>Island Trading</td>
-          <td>Helen Bennett</td>
-          <td>UK</td>
-        </tr>
-       
-      </table>
-</body>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="novocontato.html">novo contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="editarcontato.html">Editar contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- nome telefone email botao editar e remover --> 
+    <table class="my-table table table-bordered">
+      <thead class="table-dark">
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>editar</th>
+        <th>excluir</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>Jonathan xavier</td>
+        <td>jonathan@gmail.com</td>
+        <td>81999129417</td>
+        <td> <a type="button" class="btn btn-outline-primary btn-sm">editar</a></td>
+        <td> <a type="button" class="btn btn-outline-danger btn-sm">excluir</a></td>
+
+      </tr>
+      <tr>
+        <td>Jamilly Raquel</td>
+        <td>jamilly@gmail.com</td>
+        <td>81999882928</td>
+        <td> <a type="button" class="btn btn-outline-primary btn-sm">editar</a></td>
+        <td> <a type="button" class="btn btn-outline-danger btn-sm">excluir</a></td>
+      </tr>
+      <tr>
+        <td>Joyce Aline</td>
+        <td>joyce@gmail.com</td>
+        <td>81999249395</td>
+        <td> <a type="button" class="btn btn-outline-primary btn-sm">editar</a></td>
+        <td> <a type="button" class="btn btn-outline-danger btn-sm">excluir</a></td>
+      </tr>
+    </table>
+  </body>
 </html>
