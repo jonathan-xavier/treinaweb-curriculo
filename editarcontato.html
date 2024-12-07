@@ -1,20 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Latest compiled and minified CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <h2>Editar contato</h2>
-    <a href="contatos.html">Contatos</a>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style scoped lang="scss">
+    .nav-link {
+      color: white;
+
+      &:hover {
+        color: rgb(223, 223, 223);
+      }
+    }
+
+    .myContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark nav-bar-dark" style="position: fixed; width: 100%; 
+  z-index: 1;">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="novocontato.html">novo contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="editarcontato.html">Editar contato</a>
+        </li>
+    </div>
+  </nav>
+
+  
+  <div class="row myContainer" style="overflow-y: auto; margin: 0 auto;" >
+    <div class="col-sm-8" style="margin-top: 4rem; margin-bottom: 1rem;">
+      <div class="container">
+        <div class="card">
+          <div class="card-header bg-dark text-white">Editar contato</div>
+          <div class="card-body" style="padding: 1.5rem;">
+            <form>
+              <div class="row">
+                <div class="col ">
+                  <label for="nome" class="form-label">Nome:</label>
+                  <input id="nome" name="nome" placeholder="Informe o nome"
+                    type="text"
+                    class="form-control"
+                    onblur="converter_para_maiusculo(this)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="cpf" class="form-label">CPF:</label>
+                  <input id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX"
+                    type="text"
+                    class="form-control">
+                </div>
+                <div class="col">
+                  <label for="telefone" class="form-label">Telefone:</label>
+                  <input id="telefone" name="telefone"
+                    placeholder=""
+                    type="text"
+                    class="form-control">
+                </div>
+                <div class="col">
+                  <label for="rg" class="form-label">RG:</label>
+                  <input id="rg" name="rg" placeholder="Informe o RG"
+                    type="text"
+                    class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="senha" class="form-label">Senha:</label>
+                  <input id="senha" name="senha" type="password"
+                    class="form-control">
+                </div>
+                <div class="col">
+                  <label for="email" class="form-label">E-mail:</label>
+                  <input id="email" name="email"
+                    placeholder="Informe o E-mail"
+                    type="text" class="form-control"
+                    onblur="converter_para_maiusculo(this)">
+                </div>
+                <div class="col">
+                  <label for="datanascimento" class="form-label">Data de
+                    Nascimento</label>
+                  <input id="datanascimento" name="datanascimento"
+                    type="date"
+                    class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label class="form-label">Sexo:</label>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio1"
+                      name="optradio" value="F">
+                    <label class="form-check-label"
+                      for="radio1">Feminino</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio2"
+                      name="optradio" value="M">
+                    <label class="form-check-label"
+                      for="radio2">Masculino</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input"
+                      name="optradio"
+                      value="NI">
+                    <label class="form-check-label">Não informado</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="uf" class="form-label">UF:</label>
+                  <select id="uf" name="uf" class="form-select">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="falesobrevoce" class="form-label">Fale sobre
+                    você</label>
+                  <textarea id="falesobrevoce" name="falesobrevoce"
+                    cols="40"
+                    rows="5"
+                    class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="button" value="Enviar"
+                    class="btn btn-warning"
+                    onclick="validarForm()">
+                </div>
+                
+              </div>
+              <div class="row">
+                <div class="col">
+                  
+                  <!-- <div class="alert alert-warning" style="margin-top: 1rem;" id="mensagem_erro">
+                    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                  </div> -->
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
+</div>
+</body>
+
 </html>
